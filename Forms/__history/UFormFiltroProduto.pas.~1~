@@ -1,0 +1,75 @@
+unit UFormCadastroProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFormFiltroPai, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.ExtCtrls,
+  UdmDados, uLookup, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFormfiltroPai1 = class(TFormfiltroPai)
+    FDQryFiltroID_PRODUTO: TFDAutoIncField;
+    FDQryFiltroDESCRICAO: TWideStringField;
+    FDQryFiltroQUANTIDADE: TSingleField;
+    FDQryFiltroCUSTO: TSingleField;
+    FDQryFiltroVALOR_UNITARIO: TSingleField;
+    FDQryFiltroNCM: TIntegerField;
+    FDQryFiltroGENERO: TIntegerField;
+    FDQryFiltroUNIDADE: TWideStringField;
+    FDQryFiltroID_FORNECEDOR: TIntegerField;
+    FDQryFiltroCATEGORIA: TWideStringField;
+    FDQryFiltroSUB_CATEGORIA: TWideStringField;
+    DBGrid1: TDBGrid;
+    Label2: TLabel;
+    edtDescricao: TEdit;
+    procedure btnFiltroClick(Sender: TObject);
+  private
+  procedure filtrar;
+  public
+    { Public declarations }
+  end;
+
+var
+  FormfiltroPai1: TFormfiltroPai1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormfiltroPai1.btnFiltroClick(Sender: TObject);
+begin
+  inherited;
+filtrar;
+end;
+
+procedure TFormfiltroPai1.filtrar;
+begin
+  FDQryFiltro.SQL.Clear;
+    FDQRYFILTRO.SQL.Add('SELECT * FROM PRODUTO');
+    FDQRYFILTRO.SQL.Add('WHERE 1=1');
+
+
+    if Trim(edtFiltro.Text)<>'' then begin
+
+    fdqryfiltro.SQL.Add('AND TRIM(ID_CODIGO) LIKE '+QuotedStr('%'+edtDescricao.Text+'%'            ));
+
+
+
+    end;
+    if Trim(edtDescricao.Text)<>'' then begin
+
+      fdqryfiltro.SQL.Add('AND UPPER TRIM(DESCRICAO)LIKE '+QuotedStr('%'+(UpperCase(edtDescricao.text))+'%'));
+    end;
+
+
+      FDQryFiltro.open();
+      fdqryfiltro.FetchAll;
+
+
+end;
+
+end.

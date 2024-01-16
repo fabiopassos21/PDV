@@ -1,0 +1,78 @@
+unit UformFiltroFornecedores;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFormFiltroPai, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.ExtCtrls,
+  UdmDados, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFormFiltroFornecedor = class(TFormfiltroPai)
+    FDTransaction1: TFDTransaction;
+    FDQryFiltroID_FORNECEDOR: TIntegerField;
+    FDQryFiltroRAZAO_SOCIAL: TWideStringField;
+    FDQryFiltroCNPJ: TWideStringField;
+    FDQryFiltroFANTASIA: TWideStringField;
+    FDQryFiltroENDERECO: TWideStringField;
+    FDQryFiltroBAIRRO: TWideStringField;
+    FDQryFiltroID_CIDADE: TIntegerField;
+    FDQryFiltroID_ESTADO: TIntegerField;
+    FDQryFiltroEMAIL: TWideStringField;
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    edtCNPJ: TEdit;
+    procedure btnFiltroClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure filtrar;
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroFornecedor: TFormFiltroFornecedor;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormFiltroFornecedor.btnFiltroClick(Sender: TObject);
+begin
+  inherited;
+filtrar;
+end;
+
+procedure TFormFiltroFornecedor.filtrar;
+begin
+
+ FDQryFiltro.Close;
+        FDQryFiltro.SQL.Clear;
+        FDQryFiltro.SQL.Add('SELECT * FROM FORNECEDOR ');
+        FDQryFiltro.SQL.Add('WHERE 1 = 1');
+
+
+  IF TRIM(edtFiltro.Text)<>'' then begin          // RAZAO SOCIAL EDTFILTRO
+
+  FDQryFiltro.SQL.Add('AND UPPER (TRIM(RAZAO_SOCIAL))LIKE '+ QuotedStr('%'+UpperCase(Trim(edtfiltro.text))+'%'));
+
+
+
+  end;
+       IF TRIM(edtCNPJ.Text)<>'' then begin          // RAZAO SOCIAL EDTFILTRO
+
+  FDQryFiltro.SQL.Add('AND UPPER (TRIM(REPLACE(REPLACE(REPLACE(CNPJ),''.'',''''),''/'',''''),''-'','''')))LIKE '+ QuotedStr('%'+UpperCase(Trim(edtfiltro.text))+'%'));
+
+
+
+  end;
+  FDQRYFiltro.Open();
+  fdqryfiltro.FetchAll;
+
+end;
+
+end.

@@ -1,0 +1,4 @@
+object Lookup: TLookup
+  Height = 361
+  Width = 597
+end

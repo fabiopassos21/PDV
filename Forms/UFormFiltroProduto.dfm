@@ -1,0 +1,170 @@
+inherited FormFiltroProduto: TFormFiltroProduto
+  Caption = 'Filtro Produto '
+  FormStyle = fsMDIChild
+  Visible = True
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited FormFiltroPai: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitWidth = 1001
+    inherited Label1: TLabel
+      Width = 45
+      Caption = 'CODIGO'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 45
+    end
+    object Label2: TLabel [1]
+      Left = 152
+      Top = 9
+      Width = 51
+      Height = 15
+      Caption = 'Descricao'
+    end
+    inherited edtFiltro: TEdit
+      Text = ''
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited btnFiltro: TButton
+      Left = 560
+      Caption = 'Pesquisar'
+      OnClick = btnFiltroClick
+      ExplicitLeft = 560
+    end
+    inherited Panel1: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitLeft = 905
+    end
+    object edtDescricao: TEdit
+      Left = 152
+      Top = 30
+      Width = 161
+      Height = 23
+      CanUndoSelText = True
+      TabOrder = 3
+    end
+    object btnNovo: TButton
+      Left = 661
+      Top = 29
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      DisabledImageName = 'btnNovo'
+      TabOrder = 4
+      OnClick = btnNovoClick
+    end
+    object btnVisualiza: TButton
+      Left = 455
+      Top = 29
+      Width = 75
+      Height = 25
+      Caption = 'Visualizar'
+      TabOrder = 5
+      OnClick = btnVisualizaClick
+    end
+  end
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 81
+    Width = 1001
+    Height = 521
+    Align = alClient
+    DataSource = DSFiltro
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  inherited DSFiltro: TDataSource
+    DataSet = FDQryFiltro
+    Left = 808
+    Top = 184
+  end
+  inherited FDQryFiltro: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = DataModule1.fdConnect
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    SQL.Strings = (
+      'SELECT P.descricao,'
+      '    P.ID_PRODUTO,'
+      '    P.qtd,'
+      '    P.custo,'
+      '    P.v_unitario,'
+      '    P.unidade,'
+      '    P.peso_liquido,'
+      '    P.peso_bruto,'
+      '    P.fabricante,'
+      '    P.marca_modelo,'
+      '    F.RAZAO_SOCIAL FORNECEDOR'
+      
+        '    FROM  produtom P LEFT JOIN FORNECEDOR F ON F.id_fornecedor =' +
+        ' P.id_fornecedor'
+      '     WHERE 1 = 1'
+      ''
+      '')
+    Left = 808
+    Top = 240
+    object FDQryFiltroID_PRODUTO: TIntegerField
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQryFiltroDESCRICAO: TWideStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 80
+    end
+    object FDQryFiltroQTD: TSingleField
+      FieldName = 'QTD'
+      Origin = 'QTD'
+    end
+    object FDQryFiltroCUSTO: TSingleField
+      FieldName = 'CUSTO'
+      Origin = 'CUSTO'
+    end
+    object FDQryFiltroV_UNITARIO: TSingleField
+      FieldName = 'V_UNITARIO'
+      Origin = 'V_UNITARIO'
+    end
+    object FDQryFiltroUNIDADE: TWideStringField
+      FieldName = 'UNIDADE'
+      Origin = 'UNIDADE'
+      Size = 10
+    end
+    object FDQryFiltroPESO_LIQUIDO: TSingleField
+      FieldName = 'PESO_LIQUIDO'
+      Origin = 'PESO_LIQUIDO'
+    end
+    object FDQryFiltroPESO_BRUTO: TSingleField
+      FieldName = 'PESO_BRUTO'
+      Origin = 'PESO_BRUTO'
+    end
+    object FDQryFiltroFABRICANTE: TWideStringField
+      FieldName = 'FABRICANTE'
+      Origin = 'FABRICANTE'
+      Size = 255
+    end
+    object FDQryFiltroMARCA_MODELO: TWideStringField
+      FieldName = 'MARCA_MODELO'
+      Origin = 'MARCA_MODELO'
+      Size = 255
+    end
+    object FDQryFiltroFORNECEDOR: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'FORNECEDOR'
+      Origin = 'RAZAO_SOCIAL'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 80
+    end
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = DataModule1.fdConnect
+    Left = 808
+    Top = 304
+  end
+end

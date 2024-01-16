@@ -1,0 +1,14 @@
+inherited FormfiltroPai1: TFormfiltroPai1
+  Caption = 'FormfiltroPai1'
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited FormFiltroPai: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited Label1: TLabel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited Edit1: TEdit
+      StyleElements = [seFont, seClient, seBorder]
+    end
+  end
+end

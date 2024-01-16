@@ -1,0 +1,125 @@
+inherited FormFiltroClient: TFormFiltroClient
+  Caption = 'Filtro Produto '
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited FormFiltroPai: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    ExplicitTop = 8
+    ExplicitWidth = 1001
+    inherited Label1: TLabel
+      Width = 45
+      Caption = 'CODIGO'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 45
+    end
+    object Label2: TLabel [1]
+      Left = 152
+      Top = 9
+      Width = 51
+      Height = 15
+      Caption = 'Descricao'
+    end
+    inherited edtFiltro: TEdit
+      Text = ''
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited btnFiltro: TButton
+      Left = 528
+      OnClick = btnFiltroClick
+      ExplicitLeft = 528
+    end
+    inherited Panel1: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitLeft = 905
+    end
+    object edtDescricao: TEdit
+      Left = 152
+      Top = 30
+      Width = 121
+      Height = 23
+      CanUndoSelText = True
+      TabOrder = 3
+    end
+  end
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 81
+    Width = 1001
+    Height = 521
+    Align = alClient
+    DataSource = DSFiltro
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  inherited DSFiltro: TDataSource
+    DataSet = FDQryFiltro
+    Left = 808
+    Top = 184
+  end
+  inherited FDQryFiltro: TFDQuery
+    Connection = DataModule1.fdConnect
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'GEN_PRODUTO_ID'
+    UpdateOptions.AutoIncFields = 'ID_PRODUTO'
+    SQL.Strings = (
+      '      SELECT * FROM  PRODUTO')
+    Left = 808
+    Top = 240
+    object FDQryFiltroID_PRODUTO: TFDAutoIncField
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      IdentityInsert = True
+    end
+    object FDQryFiltroDESCRICAO: TWideStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 80
+    end
+    object FDQryFiltroQUANTIDADE: TSingleField
+      FieldName = 'QUANTIDADE'
+      Origin = 'QUANTIDADE'
+    end
+    object FDQryFiltroCUSTO: TSingleField
+      FieldName = 'CUSTO'
+      Origin = 'CUSTO'
+    end
+    object FDQryFiltroVALOR_UNITARIO: TSingleField
+      FieldName = 'VALOR_UNITARIO'
+      Origin = 'VALOR_UNITARIO'
+    end
+    object FDQryFiltroNCM: TIntegerField
+      FieldName = 'NCM'
+      Origin = 'NCM'
+    end
+    object FDQryFiltroGENERO: TIntegerField
+      FieldName = 'GENERO'
+      Origin = 'GENERO'
+    end
+    object FDQryFiltroUNIDADE: TWideStringField
+      FieldName = 'UNIDADE'
+      Origin = 'UNIDADE'
+      Size = 4
+    end
+    object FDQryFiltroID_FORNECEDOR: TIntegerField
+      FieldName = 'ID_FORNECEDOR'
+      Origin = 'ID_FORNECEDOR'
+    end
+    object FDQryFiltroCATEGORIA: TWideStringField
+      FieldName = 'CATEGORIA'
+      Origin = 'CATEGORIA'
+      Size = 30
+    end
+    object FDQryFiltroSUB_CATEGORIA: TWideStringField
+      FieldName = 'SUB_CATEGORIA'
+      Origin = 'SUB_CATEGORIA'
+      Size = 30
+    end
+  end
+end

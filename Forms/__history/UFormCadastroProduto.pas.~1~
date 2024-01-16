@@ -1,0 +1,40 @@
+unit UFormCadastroProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFormFiltroPai, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.ExtCtrls,
+  UdmDados, uLookup, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFormfiltroPai1 = class(TFormfiltroPai)
+    FDQryFiltroID_PRODUTO: TFDAutoIncField;
+    FDQryFiltroDESCRICAO: TWideStringField;
+    FDQryFiltroQUANTIDADE: TSingleField;
+    FDQryFiltroCUSTO: TSingleField;
+    FDQryFiltroVALOR_UNITARIO: TSingleField;
+    FDQryFiltroNCM: TIntegerField;
+    FDQryFiltroGENERO: TIntegerField;
+    FDQryFiltroUNIDADE: TWideStringField;
+    FDQryFiltroID_FORNECEDOR: TIntegerField;
+    FDQryFiltroCATEGORIA: TWideStringField;
+    FDQryFiltroSUB_CATEGORIA: TWideStringField;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormfiltroPai1: TFormfiltroPai1;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,29 @@
+program Project2;
+
+uses
+  Vcl.Forms,
+  UdmDados in 'Forms\UdmDados.pas' {DataModule1: TDataModule},
+  UformCadastroPaiM in 'Forms\UformCadastroPaiM.pas' {FRMCadastroPai},
+  UformConfigBanco in 'Forms\UformConfigBanco.pas' {FormCONFIGbANCO},
+  uBiblioteca in 'Biblioteca\uBiblioteca.pas',
+  UFormCadastroCliente in 'Forms\UFormCadastroCliente.pas' {FormCadastroCliente},
+  UformPrincipal in 'Forms\UformPrincipal.pas' {FrmPrincipal},
+  UFormCadastroEstado in 'Forms\UFormCadastroEstado.pas' {FormCadastroEstado},
+  UCadastroCidade in 'Forms\UCadastroCidade.pas' {FRMCadastroCidade},
+  uLookup in 'Shared\uLookup.pas' {Lookup: TDataModule},
+  uFormMain in 'Forms\uFormMain.pas' {FormMain},
+  uFormFiltroPai in 'Forms\uFormFiltroPai.pas' {FormfiltroPai},
+  UformFiltroClientes in 'Forms\UformFiltroClientes.pas' {FormFiltroCliente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormMain, FormMain);
+  Application.CreateForm(TFormCONFIGbANCO, FormCONFIGbANCO);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TLookup, Lookup);
+  Application.CreateForm(TFormFiltroCliente, FormFiltroCliente);
+  Application.Run;
+end.

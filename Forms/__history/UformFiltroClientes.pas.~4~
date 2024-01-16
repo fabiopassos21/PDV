@@ -1,0 +1,79 @@
+unit UformFiltroClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFormFiltroPai, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Grids, Vcl.DBGrids, UdmDados;
+
+type
+  TFormFiltroCliente = class(TFormfiltroPai)
+    DBGrid1: TDBGrid;
+    FDTransaction: TFDTransaction;
+    Label2: TLabel;
+    Label3: TLabel;
+    edtFantasia: TEdit;
+    edtCPF: TEdit;
+    edtCodigo: TEdit;
+    Codigo: TLabel;
+    Novo: TButton;
+    Button3: TButton;
+    procedure btnFiltroClick(Sender: TObject);
+  private
+   procedure filtrar;
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroCliente: TFormFiltroCliente;
+
+implementation
+
+{$R *.dfm}
+
+{ TFormFiltroCliente }
+
+procedure TFormFiltroCliente.btnFiltroClick(Sender: TObject);
+begin
+  inherited;
+
+    Filtrar;
+
+end;
+
+procedure TFormFiltroCliente.filtrar;
+begin
+        FDQryFiltro.Close;
+        FDQryFiltro.SQL.Clear;
+        FDQryFiltro.SQL.Add('SELECT * FROM CLIENTE ');
+        FDQryFiltro.SQL.Add('WHERE 1 = 1');
+        if Trim(edtFiltro.Text) <> '' then begin
+
+
+        FDQryFiltro.SQL.Add('AND UPPER (TRIM (RAZAO_SOCIAL) ) LIKE ' + QuotedStr('%' +UpperCase(Trim(edtFiltro.text))+'%'));      // #39 =11 ou chr(39) tambem funciona
+
+
+        end;
+
+        if Trim(edtFantasia.Text)<> '' then begin
+        FDQryFiltro.SQL.Add('AND UPPER ( TRIM (FANTASIA)) LIKE '+ QuotedStr('%' + UpperCase(Trim(edtFantasia.text))+'%'));
+
+        end;
+        IF Trim(edtCPF.Text)<> '' then begin
+          FDQryFiltro.SQL.Add('AND UPPER ( TRIM (REPLACE(REPLACE(REPLACE(CPF_CNPJ,''.'',''''),''-'',''''),''/'','''' ))))LIKE'+QuotedStr('%'+UpperCase(Trim(edtCPF.text))+'%'));
+        end;
+
+        FdqryFiltro.Open();
+        FDQryFiltro.FetchAll;
+
+
+
+
+end;
+
+end.

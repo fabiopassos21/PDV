@@ -1,0 +1,22 @@
+program Project2;
+
+uses
+  Vcl.Forms,
+  UdmDados in 'Forms\UdmDados.pas' {DataModule1: TDataModule},
+  UformCadastroPai in 'Forms\UformCadastroPai.pas' {FrmPrincipal},
+  UformCadastroPaiM in 'Forms\UformCadastroPaiM.pas' {FRMCadastroPai},
+  UformConfigBanco in 'Forms\UformConfigBanco.pas' {FormCONFIGbANCO},
+  uBiblioteca in 'Biblioteca\uBiblioteca.pas',
+  UFormCadastroCliente in 'Forms\UFormCadastroCliente.pas' {FRMCadastroPai1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFormCONFIGbANCO, FormCONFIGbANCO);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TFRMCadastroPai1, FRMCadastroPai1);
+  Application.Run;
+end.

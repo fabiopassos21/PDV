@@ -1,0 +1,31 @@
+program Project2;
+
+uses
+  Vcl.Forms,
+  UdmDados in 'Forms\UdmDados.pas' {DataModule1: TDataModule},
+  UformCadastroPaiM in 'Forms\UformCadastroPaiM.pas' {FRMCadastroPai},
+  UformConfigBanco in 'Forms\UformConfigBanco.pas' {FormCONFIGbANCO},
+  uBiblioteca in 'Biblioteca\uBiblioteca.pas',
+  UFormCadastroCliente in 'Forms\UFormCadastroCliente.pas' {FormCadastroCliente},
+  UformPrincipal in 'Forms\UformPrincipal.pas' {FrmPrincipal},
+  UFormCadastroEstado in 'Forms\UFormCadastroEstado.pas' {FormCadastroEstado},
+  UCadastroCidade in 'Forms\UCadastroCidade.pas' {FRMCadastroCidade},
+  uLookup in 'Shared\uLookup.pas' {Lookup: TDataModule},
+  Grafic in 'Grafic.pas' {TMSForm2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFormCONFIGbANCO, FormCONFIGbANCO);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TLookup, Lookup);
+  Application.CreateForm(TFormCadastroCliente, FormCadastroCliente);
+  Application.CreateForm(TFormCadastroCliente, FormCadastroCliente);
+  Application.CreateForm(TFormCadastroEstado, FormCadastroEstado);
+  Application.CreateForm(TFRMCadastroCidade, FRMCadastroCidade);
+  Application.CreateForm(TTMSForm2, TMSForm2);
+  Application.Run;
+end.

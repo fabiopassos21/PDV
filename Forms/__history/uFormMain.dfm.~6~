@@ -1,0 +1,1047 @@
+object FormMain: TFormMain
+  Left = 250
+  Top = 200
+  ClientHeight = 606
+  ClientWidth = 681
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Icon.Data = {
+    0000010001001010100000000000280100001600000028000000100000002000
+    00000100040000000000C0000000000000000000000000000000000000000000
+    000000008000008000000080800080000000800080008080000080808000C0C0
+    C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF000000
+    00000000000000000000000000000000000000000000CCCCCCCCCCCCCCCC0000
+    000000000000000000000000000000C000C000C0CCC000C000C000C0000C00C0
+    00C0C0C0CCC000C000CC0CC0C000CCCCC0C000C00CCC00000000000000000000
+    000000000000CCCCCCCCCCCCCCCC00000000000000000000000000000000FFFF
+    0000FFFF0000FFFF000000000000FFFF0000FFFF0000DDD10000DDDE0000DD51
+    0000DC97000005D80000FFFF0000FFFF000000000000FFFF0000FFFF0000}
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  TextHeight = 13
+  object AdvToolBarPager1: TAdvToolBarPager
+    Left = 0
+    Top = 0
+    Width = 681
+    Height = 149
+    ActivePage = AdvPage2
+    Caption.Caption = 'Principal'
+    Caption.Height = 26
+    CaptionButtons = [cbClose, cbMinimize, cbMaximize]
+    Hints.MDICloseBtnHint = 'Close'
+    Hints.MDIMinimizeBtnHint = 'Minimize'
+    Hints.MDIMaximizeBtnHint = 'Maximize'
+    Hints.HelpBtnHint = 'Help'
+    TabGroups = <>
+    TabSettings.EndMargin = 0
+    Persistence.Location = plRegistry
+    Persistence.Enabled = False
+    ToolBarStyler = AdvToolBarOfficeStyler1
+    PageLeftMargin = 0
+    PageRightMargin = 0
+    OptionPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C0000000000000000000000000100000000000000000000000080000080
+      000000808000800000008000800080800000C0C0C000C0DCC000F0CAA6000020
+      400000206000002080000020A0000020C0000020E00000400000004020000040
+      400000406000004080000040A0000040C0000040E00000600000006020000060
+      400000606000006080000060A0000060C0000060E00000800000008020000080
+      400000806000008080000080A0000080C0000080E00000A0000000A0200000A0
+      400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0200000C0
+      400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0200000E0
+      400000E0600000E0800000E0A00000E0C00000E0E00040000000400020004000
+      400040006000400080004000A0004000C0004000E00040200000402020004020
+      400040206000402080004020A0004020C0004020E00040400000404020004040
+      400040406000404080004040A0004040C0004040E00040600000406020004060
+      400040606000406080004060A0004060C0004060E00040800000408020004080
+      400040806000408080004080A0004080C0004080E00040A0000040A0200040A0
+      400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0200040C0
+      400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0200040E0
+      400040E0600040E0800040E0A00040E0C00040E0E00080000000800020008000
+      400080006000800080008000A0008000C0008000E00080200000802020008020
+      400080206000802080008020A0008020C0008020E00080400000804020008040
+      400080406000804080008040A0008040C0008040E00080600000806020008060
+      400080606000806080008060A0008060C0008060E00080800000808020008080
+      400080806000808080008080A0008080C0008080E00080A0000080A0200080A0
+      400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0200080C0
+      400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0200080E0
+      400080E0600080E0800080E0A00080E0C00080E0E000C0000000C0002000C000
+      4000C0006000C0008000C000A000C000C000C000E000C0200000C0202000C020
+      4000C0206000C0208000C020A000C020C000C020E000C0400000C0402000C040
+      4000C0406000C0408000C040A000C040C000C040E000C0600000C0602000C060
+      4000C0606000C0608000C060A000C060C000C060E000C0800000C0802000C080
+      4000C0806000C0808000C080A000C080C000C080E000C0A00000C0A02000C0A0
+      4000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C02000C0C0
+      4000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000FF0000FF
+      000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FDFDFDFDFDFFFFFFFF00
+      0000FDFDFDFDE3E3E3E3FF000000FDE3FFFDFDE3E3E3FF000000FDE3FFFDFDE3
+      E3E3FF000000FDE3FFFDE3FFFDE3FD000000FDE3FFFDFDFDFDFDFD000000FDE3
+      FFFFFFFFFFFDFD000000FDE3E3E3E3E3E3FDFD000000FDFDFDFDFDFDFDFDFD00
+      0000}
+    OptionDisabledPicture.Data = {
+      424DA20400000000000036040000280000000900000009000000010008000000
+      00006C0000000000000000000000000100000000000000000000000080000080
+      000000808000800000008000800080800000C0C0C000C0DCC000F0CAA6000020
+      400000206000002080000020A0000020C0000020E00000400000004020000040
+      400000406000004080000040A0000040C0000040E00000600000006020000060
+      400000606000006080000060A0000060C0000060E00000800000008020000080
+      400000806000008080000080A0000080C0000080E00000A0000000A0200000A0
+      400000A0600000A0800000A0A00000A0C00000A0E00000C0000000C0200000C0
+      400000C0600000C0800000C0A00000C0C00000C0E00000E0000000E0200000E0
+      400000E0600000E0800000E0A00000E0C00000E0E00040000000400020004000
+      400040006000400080004000A0004000C0004000E00040200000402020004020
+      400040206000402080004020A0004020C0004020E00040400000404020004040
+      400040406000404080004040A0004040C0004040E00040600000406020004060
+      400040606000406080004060A0004060C0004060E00040800000408020004080
+      400040806000408080004080A0004080C0004080E00040A0000040A0200040A0
+      400040A0600040A0800040A0A00040A0C00040A0E00040C0000040C0200040C0
+      400040C0600040C0800040C0A00040C0C00040C0E00040E0000040E0200040E0
+      400040E0600040E0800040E0A00040E0C00040E0E00080000000800020008000
+      400080006000800080008000A0008000C0008000E00080200000802020008020
+      400080206000802080008020A0008020C0008020E00080400000804020008040
+      400080406000804080008040A0008040C0008040E00080600000806020008060
+      400080606000806080008060A0008060C0008060E00080800000808020008080
+      400080806000808080008080A0008080C0008080E00080A0000080A0200080A0
+      400080A0600080A0800080A0A00080A0C00080A0E00080C0000080C0200080C0
+      400080C0600080C0800080C0A00080C0C00080C0E00080E0000080E0200080E0
+      400080E0600080E0800080E0A00080E0C00080E0E000C0000000C0002000C000
+      4000C0006000C0008000C000A000C000C000C000E000C0200000C0202000C020
+      4000C0206000C0208000C020A000C020C000C020E000C0400000C0402000C040
+      4000C0406000C0408000C040A000C040C000C040E000C0600000C0602000C060
+      4000C0606000C0608000C060A000C060C000C060E000C0800000C0802000C080
+      4000C0806000C0808000C080A000C080C000C080E000C0A00000C0A02000C0A0
+      4000C0A06000C0A08000C0A0A000C0A0C000C0A0E000C0C00000C0C02000C0C0
+      4000C0C06000C0C08000C0C0A000F0FBFF00A4A0A000808080000000FF0000FF
+      000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FDFDFDFDFDFFFFFFFF00
+      0000FDFDFDFD07070707FF000000FD07FFFDFD070707FF000000FD07FFFDFD07
+      0707FF000000FD07FFFD07FFFD07FD000000FD07FFFDFDFDFDFDFD000000FD07
+      FFFFFFFFFFFDFD000000FD070707070707FDFD000000FDFDFDFDFDFDFDFDFD00
+      0000}
+    TabOrder = 0
+    object AdvPage1: TAdvPage
+      Left = 4
+      Top = 52
+      Width = 673
+      Height = 92
+      Caption = 'Principal'
+      object AdvToolBar1: TAdvToolBar
+        Left = 3
+        Top = 3
+        Width = 334
+        Height = 86
+        AllowFloating = True
+        AutoSize = False
+        Caption = 'Cadastro'
+        CaptionFont.Charset = DEFAULT_CHARSET
+        CaptionFont.Color = clWindowText
+        CaptionFont.Height = -12
+        CaptionFont.Name = 'Segoe UI'
+        CaptionFont.Style = []
+        CaptionPosition = cpBottom
+        CaptionAlignment = taCenter
+        CompactImageIndex = -1
+        ShowCaption = True
+        ShowRightHandle = False
+        TextAutoOptionMenu = 'Add or Remove Buttons'
+        TextOptionMenu = 'Options'
+        ToolBarStyler = AdvToolBarOfficeStyler1
+        ParentOptionPicture = True
+        ToolBarIndex = 0
+        object AdvToolBarSeparator1: TAdvToolBarSeparator
+          Left = 215
+          Top = 2
+          Width = 23
+          Height = 63
+          LineColor = clBtnShadow
+        end
+        object AdvToolBarSeparator2: TAdvToolBarSeparator
+          Left = 97
+          Top = 2
+          Width = 23
+          Height = 63
+          LineColor = clBtnShadow
+        end
+        object AdvGlowButton1: TAdvGlowButton
+          Left = 120
+          Top = 2
+          Width = 95
+          Height = 63
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          Picture.Data = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000097048597300000B1300000B1301009A9C180000019C494441545885
+            636018F1404E4E3A941A584A4ACA922C07C8CA4AFFA7069691915E35B21D202B
+            2BF518E40862B09C9C9C200D1C403C06A6999001750030B466D3CD01A8D12D75
+            1B165D402EE30038407A3222D1CAE8D0DD01D2D2D25E08074895D0DD01405F73
+            0283FF1BC401D2BBE9EE00683AD8010D819FA2A2A23C03E000E97C989C9C9C94
+            0FCD1D805E67C8C8489621C94F19A0720086A56E0FB003805134EA8051070C76
+            071C8362722DF80C2AF980C5EE033C0E80148D58700152F159448EE5C086AA3A
+            48BF8A8A0A3BD08C03581D00ADA582809C87C8122A2A427C3007282929F193EE
+            00A91DA8159164324E078080A4A4241750D35A84A4A42D522D664FAA0340C10E
+            F239B6B6005607402D32431820F51C481782821F68D80B2483371168749E430A
+            85FD509F832CFF03157F85AC1EBDB202B9740E1E5F2DC0D0800680F12E0CB4F8
+            090E33FE02E57CF11AA0A5A5C506F47D2B10FF40F209A811D105946621E40010
+            0046A71C50FF5E34CB81694CD29F18FD3043448089D31358853A01A34688688D
+            484056565619A8DF1BA8DFD4D8D898951C33863F00001B41A828D1AB83400000
+            000049454E44AE426082}
+          Rounded = True
+          TabOrder = 0
+          Appearance.BorderColor = 14727579
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15653832
+          Appearance.ColorTo = 16178633
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = 15921906
+          Appearance.ColorDisabledTo = 15921906
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 15586496
+          Appearance.ColorMirrorTo = 16245200
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = 11974326
+          Appearance.ColorMirrorDisabledTo = 15921906
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+        object AdvGlowButton2: TAdvGlowButton
+          Left = 2
+          Top = 2
+          Width = 95
+          Height = 63
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          Picture.Data = {
+            89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+            87000000097048597300000B1300000B1301009A9C180000017C494441546881
+            ED97BD4A034114852F880A2A585B6AA3F8F30AE283D8F80476568260AF18147D
+            04B1B050B0F2A7D6422CD407B01405A351B050F41CB2036127B3668749EE0AF7
+            830F0642C839C9DD9989886118865131E6600DDEC1F74CAEB7E0AC62AE3F1984
+            BBF01BFE04FC823B704029631086BF9070F0BCE752B1127BD27978E7B64AD236
+            70E68BC6A6689C6614F27AF0812D1BDEB9A990D7E35EE20BDC2AE4F568487C81
+            3785BC1E0C115BE05521AFC7BF1F219EB0B1053614F27AF07AC02D31661B9D56
+            C8DB165E0FCA16A8A9240DC06BC199741EFE14F6AB242D8025783D281A27BEC6
+            6FBE72E15BE1F580272C77984626D77C602B33F346D51882F370051EC22BF800
+            3F32B9BE864770152EC0618DA0ADF04FCC223C869F527E1BE57B4EE0121CE965
+            F051B8061F234287AC4BF3441FEB66F03EB80C9F1306CFCB715B97E6AF9B9449
+            78D9C5E0796FE054AAF013F0A987E19DFCCCF114050E14C23BF75314A82B1678
+            4951402BBCD30A58012B6005AC806E01C3300C23C82F9E9384E4081BCB4B0000
+            000049454E44AE426082}
+          Rounded = True
+          TabOrder = 2
+          OnClick = AdvGlowButton2Click
+          Appearance.BorderColor = 14727579
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15653832
+          Appearance.ColorTo = 16178633
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = 15921906
+          Appearance.ColorDisabledTo = 15921906
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 15586496
+          Appearance.ColorMirrorTo = 16245200
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = 11974326
+          Appearance.ColorMirrorDisabledTo = 15921906
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+        object AdvGlowButton3: TAdvGlowButton
+          Left = 238
+          Top = 2
+          Width = 95
+          Height = 63
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          Picture.Data = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000097048597300000B1300000B1301009A9C18000001C1494441545885
+            ED97BB2F444114C6275B2024E2DD888D44A340E315958448766988CADF200AEF
+            4E220A112442140AAD4828240A5A0551481442A75982D5293CE2757D27F7DCB8
+            26B377EFE4CEDD55EC497EC59C33B3DF97333BB3B34208D1076EC10D888B2C04
+            095B4C827345200626C13AD8002B600AF4804293062C895DF0A6C8BB7901DBA0
+            230C03BAEC81460DBD08A80315A60C105F6007F40BF5F6548241B00992BCE615
+            0C9932E0E6035C8333E6C1636E220C03BAE40CF89E485F9E16D025E5BF413BD7
+            68BC044AC0A1490324DE20EC68936A279CAFE5F1028F0B7C9A483BE151FC9EF3
+            7A702FD547B936EEEAC808E7F2C07E1003E9C4492CCAF55329EFD784A78166FE
+            106A7F525177DA1F6551D9DC30D7693BAEC230E0B47F4C51336240DE823B1FED
+            97B7203FC816789938E65C8DD47E1D715F062CF1F718B6726E2245FB8D1F43B7
+            0912EFE6313D54AAC1A5346F598470118549CEC0FF35402F197AEF2D82693003
+            B6C08541F177958159D024BC83EE8555F01CD0C081CA804E548179F0A4294C3F
+            6A6BA02CA801274A857D211D81CF14A2E7604ED8EF89887BB10903EE2866915E
+            30003A41B9D702D306B423EB06547F4E331A713641E2B14C8BFF00D6C99C092F
+            B6A4680000000049454E44AE426082}
+          Rounded = True
+          TabOrder = 1
+          OnClick = AdvGlowButton3Click
+          Appearance.BorderColor = 14727579
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15653832
+          Appearance.ColorTo = 16178633
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = 15921906
+          Appearance.ColorDisabledTo = 15921906
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 15586496
+          Appearance.ColorMirrorTo = 16245200
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = 11974326
+          Appearance.ColorMirrorDisabledTo = 15921906
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+      end
+      object AdvToolBar4: TAdvToolBar
+        Left = 340
+        Top = 3
+        Width = 325
+        Height = 86
+        AllowFloating = True
+        AutoSize = False
+        Caption = 'Untitled'
+        CaptionFont.Charset = DEFAULT_CHARSET
+        CaptionFont.Color = clWindowText
+        CaptionFont.Height = -12
+        CaptionFont.Name = 'Segoe UI'
+        CaptionFont.Style = []
+        CaptionPosition = cpBottom
+        CaptionAlignment = taCenter
+        CompactImageIndex = -1
+        ShowCaption = True
+        ShowRightHandle = False
+        TextAutoOptionMenu = 'Add or Remove Buttons'
+        TextOptionMenu = 'Options'
+        ToolBarStyler = AdvToolBarOfficeStyler1
+        ParentOptionPicture = True
+        ToolBarIndex = 1
+      end
+    end
+    object AdvPage2: TAdvPage
+      Left = 4
+      Top = 52
+      Width = 673
+      Height = 92
+      Caption = 'Filtros'
+      object AdvToolBar2: TAdvToolBar
+        Left = 3
+        Top = 3
+        Width = 120
+        Height = 86
+        AllowFloating = True
+        AutoSize = False
+        Caption = 'Filtro Cliente'
+        CaptionFont.Charset = DEFAULT_CHARSET
+        CaptionFont.Color = clWindowText
+        CaptionFont.Height = -12
+        CaptionFont.Name = 'Segoe UI'
+        CaptionFont.Style = []
+        CaptionPosition = cpBottom
+        CaptionAlignment = taCenter
+        CompactImageIndex = -1
+        ShowCaption = True
+        ShowRightHandle = False
+        TextAutoOptionMenu = 'Add or Remove Buttons'
+        TextOptionMenu = 'Options'
+        ToolBarStyler = AdvToolBarOfficeStyler1
+        ParentOptionPicture = True
+        ToolBarIndex = 0
+        object AdvGlowButton4: TAdvGlowButton
+          Left = 2
+          Top = 2
+          Width = 112
+          Height = 63
+          FocusType = ftHot
+          NotesFont.Charset = DEFAULT_CHARSET
+          NotesFont.Color = clWindowText
+          NotesFont.Height = -11
+          NotesFont.Name = 'Tahoma'
+          NotesFont.Style = []
+          Picture.Data = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000097048597300000B1300000B1301009A9C18000001FF494441545885
+            ED973D4B0341108647C58F4241216013B4325A08492CFC6814AC4C04AD838262
+            2C542442B412FD01066D04B5D24221B556E92CFC05E982A2A09D16A2A6092846
+            67DC3D1C8F5CF66EB31210071E02C9BC33EFEDC7ED06E03FBC871F1942269161
+            A407A9FFEDA65DC836728D7C94E019492351D38D5B913DE4D5A171292E90B089
+            E601E4D256FC1E394292C814B28CA490AC2DAF207FD78E6EE49115BC4162486D
+            194D10C9D88C2CE8346F839F4F7E8A347BD0279037A9A5A91BF56A609F353F83
+            F24FED1433ACC62DD2E45648ABDD5A7034EC2D1ACDAD38602656DD8A76982856
+            41730A1F88ED698D428D1BD195143C80DED0DB834F675095EC67C987069A5344
+            58CD1555F2204B4E1A32D0C96AA654C9132C79DA90814656F358953CC292970C
+            196867357755C90196BC65C8C000ABB9AE4AA623F54926670D19D86406226E04
+            69F0B06D145187E464AD3C88F5A08C283390A9D0C03C686EEB73264C6836EF85
+            EFB7201DCD1D5EC47D5244623AD5663D36A7A9E317980D8FFAAFA0CB449115A1
+            83C5A7D0D09CD3B0E799AE28BFD30ABA4C58E73AF1228D8C8378C33580D8E7FD
+            20567B8EE55ACDE9F31D89EB9AA0CBC49DADB08A82341497CD2D338BBA26E832
+            B106E2482DD798869E563B5F7073A64C58110271AAD115FD04C4EB95DE7063E0
+            BCCF8D9BD0093E1DF419AAA689AA19A00883A13F2D7F273E01D5D7C61C753572
+            2E0000000049454E44AE426082}
+          Rounded = True
+          TabOrder = 0
+          OnClick = AdvGlowButton4Click
+          Appearance.BorderColor = 14727579
+          Appearance.BorderColorHot = 10079963
+          Appearance.BorderColorDown = 4548219
+          Appearance.BorderColorChecked = 4548219
+          Appearance.Color = 15653832
+          Appearance.ColorTo = 16178633
+          Appearance.ColorChecked = 11918331
+          Appearance.ColorCheckedTo = 7915518
+          Appearance.ColorDisabled = 15921906
+          Appearance.ColorDisabledTo = 15921906
+          Appearance.ColorDown = 7778289
+          Appearance.ColorDownTo = 4296947
+          Appearance.ColorHot = 15465983
+          Appearance.ColorHotTo = 11332863
+          Appearance.ColorMirror = 15586496
+          Appearance.ColorMirrorTo = 16245200
+          Appearance.ColorMirrorHot = 5888767
+          Appearance.ColorMirrorHotTo = 10807807
+          Appearance.ColorMirrorDown = 946929
+          Appearance.ColorMirrorDownTo = 5021693
+          Appearance.ColorMirrorChecked = 10480637
+          Appearance.ColorMirrorCheckedTo = 5682430
+          Appearance.ColorMirrorDisabled = 11974326
+          Appearance.ColorMirrorDisabledTo = 15921906
+          Appearance.GradientHot = ggVertical
+          Appearance.GradientMirrorHot = ggVertical
+          Appearance.GradientDown = ggVertical
+          Appearance.GradientMirrorDown = ggVertical
+          Appearance.GradientChecked = ggVertical
+        end
+      end
+    end
+    object AdvPage3: TAdvPage
+      Left = 4
+      Top = 52
+      Width = 673
+      Height = 92
+      Caption = 'Configura'#231#245'es'
+      object AdvToolBar3: TAdvToolBar
+        Left = 3
+        Top = 3
+        Width = 120
+        Height = 86
+        AllowFloating = True
+        AutoSize = False
+        Caption = 'Untitled'
+        CaptionFont.Charset = DEFAULT_CHARSET
+        CaptionFont.Color = clWindowText
+        CaptionFont.Height = -12
+        CaptionFont.Name = 'Segoe UI'
+        CaptionFont.Style = []
+        CaptionPosition = cpBottom
+        CaptionAlignment = taCenter
+        CompactImageIndex = -1
+        ShowCaption = True
+        ShowRightHandle = False
+        TextAutoOptionMenu = 'Add or Remove Buttons'
+        TextOptionMenu = 'Options'
+        ToolBarStyler = AdvToolBarOfficeStyler1
+        ParentOptionPicture = True
+        ToolBarIndex = 0
+      end
+    end
+    object AdvQuickAccessToolBar1: TAdvQuickAccessToolBar
+      Left = 54
+      Top = 1
+      Width = 60
+      Height = 25
+      ShowCustomizeOption = False
+    end
+    object AdvShapeButton1: TAdvShapeButton
+      Left = 5
+      Top = 6
+      Width = 45
+      Height = 45
+      Appearance.Shape = bsOrb
+      Appearance.BorderColor = clWhite
+      Appearance.BorderColorHot = clWhite
+      Appearance.BorderColorDown = clWhite
+      Appearance.BorderColorDisabled = clWhite
+      Appearance.InnerBorderColor = clGray
+      Appearance.InnerBorderColorHot = clGray
+      Appearance.InnerBorderColorDown = clGray
+      Appearance.Color = 12954008
+      Appearance.ColorTo = 15722980
+      Appearance.ColorHot = 14408667
+      Appearance.ColorHotTo = 14408667
+      Appearance.ColorDown = 10724259
+      Appearance.ColorDownTo = 10724259
+      Appearance.ColorDisabled = clGray
+      Appearance.ColorDisabledTo = clGray
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Picture.Data = {
+        89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+        F4000000097048597300000B1300000B1301009A9C18000005A8494441545885
+        B5575950935714D66967DA994EFBD28776A6B5D3079FDAA9DA02496449C8F293
+        3F8404082690604220210B92058500D1CAAA4002880567AC4B3BEEB80CA3B59D
+        D6BA503BC5056B1544242A0A8425606BDD4A5D02A7F7FE4064183022E99D3933
+        F7BF67F9BE7BEECDB927F3E6CD71848484BC1B1414F6118BC57A73AEB15E7AD0
+        68B40F9962713D4796D825369B7A13726D0364AABA37322EE1329D4324FDAFE0
+        1124994C2895FD052D67466B9F0CC164D9F07737A4D66D78C014C59E5EB468D1
+        5B01070FE3F1257159963B358FFA61DD603FE477BA61657B3758DBBA21A7A31B
+        D6BAFBA0EAA107569F3DE96589C5CD52A9F4B58081A3B4BFC395C9DCCEBF7AC1
+        E6EA01EB952E4ACC976E826CE3162057AC04517E11E84F9C8392813E301DDA35
+        1C211415068C40844058B8F2D811EF2ABCE371706BEB6D88325A21F1AB6D60FA
+        BD03743F370157AD07DDB12628EA73036799B427605960C5C5B7E4BB6E3F0747
+        A2D8B20B64355F83F6FB5F803465536BC6D37F80C0920B596D5DA0AC72DE0F0A
+        628405840057B1BC276B12381681350F569CB902A2BC4294FAB3D41ACE04CE0A
+        9EA71F6C0006976B0A08019E326DC83A8500335E0A7A94769C09F19A522AF502
+        8B0D54BB1B28BDF2DB7AA0B3D8E90121C0952BBB2C2D9D3E70D51EB4BB08B647
+        5ABD69147F276FAF07B1BD04520FFDE8B3E11B321F2FA6D33F0E0801B64C51A5
+        DC71D0179C48D30D07D142D9E1A2F83B9AC3C7616A76926AB78D7264C9870302
+        8E476868E8DB2C49E2706CFE5A20750610EA752349C56B07910CC51874CFD01D
+        19250D26482871005F9FF9982D931F46E5F9F580803318CCCF58B171CDC9E5A5
+        8FD6DDB804532BE084601DB64195F0F2125AD8E280803385624B4C46C660456F
+        FB38D020D40C0F4035AA86950F7A29C173BC8675D8A6DCDD0E42A3C1C38C8936
+        CF099C258AAD53553BEED60C7BC071DF0DA54337A1B0DF05057D1DD30AD6950E
+        7582E39E1B36FED30FCACAF2BB11E2B84DAFBCF3940DCEBB15E8817911E88BC8
+        3890EFF2AA8A7B4C52943B2BF09050D612F4CCDE29F6DC9835F05429F65C8798
+        0CE39FB4B059DC09B624A1D57EB579CEE013B2BABD1950296F45A1E7FB05A7D3
+        C322E595E54F03053E21F2CAB227C18C70965F021CB9BC31FBC2E96983886DD9
+        603E71744610ACC336D3E9B22FFE0A1CB9E2845F02843AF55E41EFF497CEEEBA
+        08E9FB77CE4800EBB0CDB47A1413C7F6873F9FD0E89FD9AE77FA1C8DDF1D0016
+        8F0066241B24AB2C2F4CF3973D57215AA58270562470A20590D574DCA7CB4131
+        716CBFF7204A63788A6B3976C0AC49A118D6973980B6341CE8B4A5A0ABDF3123
+        81C4B212C8B1D9291FF44E4024C9A762E00D8DBF1F4FFD1E014F95F6D0D2728B
+        72C8EEE8042EC10781400844C817104EA381BC78CD8C04A4761B90C8369AC301
+        6E4830CA5A248A31160BC72452340F5EE20E6876A7EC3BE27BD5C4FA15A0637C
+        02799F2F80681E1B569D6FA48A8CF37E0FD4FCEBA1C4892A5FD1800BE94E4134
+        C1A66C754B3F05B121F3F9F3BDB701A234DA9D7E09A03F1AEFA3B3F25A5B6F8D
+        7738D7405EB3191272ED606A6C44E7EC8292C11B1401272ACF63D243ADAD413A
+        53E329CA56817CB0EFD8EE3B71FA9FD1E9F4F7FC12183B06B55D525C4139276F
+        DB0BF145155403EA7BEFDB6E83F1641348D63929319E3A837AC0497A641B5758
+        8E9A947DD4777C51397096AB67578EA3D4A907E28BCAA86089B5DB819BA203C9
+        FA6A506CDD03EA033F50ED57E6F976C83CD746CDF15AF237F5B0CC514BD926D5
+        6D1F27B21EF8E9BA8659814F0C52ABAB884A377A31006E36D5FB8F827C33EA84
+        376E85D88232602BD494E0395E537CBD93B2315F7481EEA7DF80D01ABC84565B
+        F64AE01303FFF124D4DA0E32C33C82FB404C6422D5A60B2E4A7CDF48876DF819
+        662F91AAB9161C1CB1604EE09307BE9C3C55CA26F42B19E0A9B54F50C3E98DC9
+        C91F1166E78DE0395EA374AAB4BA97BE6C73190B17926F2C66303EC082E7AF1A
+        E73FD133A96B9795329A0000000049454E44AE426082}
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 7
+      Version = '6.2.1.8'
+    end
+  end
+  object AdvOfficeStatusBar1: TAdvOfficeStatusBar
+    Left = 0
+    Top = 587
+    Width = 681
+    Height = 19
+    AnchorHint = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Panels = <
+      item
+        AppearanceStyle = psLight
+        DateFormat = 'd/MM/yyyy'
+        Progress.BackGround = clNone
+        Progress.Indication = piPercentage
+        Progress.Min = 0
+        Progress.Max = 100
+        Progress.Position = 0
+        Progress.Level0Color = clLime
+        Progress.Level0ColorTo = 14811105
+        Progress.Level1Color = clYellow
+        Progress.Level1ColorTo = 13303807
+        Progress.Level2Color = 5483007
+        Progress.Level2ColorTo = 11064319
+        Progress.Level3Color = clRed
+        Progress.Level3ColorTo = 13290239
+        Progress.Level1Perc = 70
+        Progress.Level2Perc = 90
+        Progress.BorderColor = clBlack
+        Progress.ShowBorder = False
+        Progress.Stacked = False
+        TimeFormat = 'h:mm:ss'
+        Width = 80
+      end
+      item
+        AppearanceStyle = psLight
+        DateFormat = 'd/MM/yyyy'
+        Progress.BackGround = clNone
+        Progress.Indication = piPercentage
+        Progress.Min = 0
+        Progress.Max = 100
+        Progress.Position = 0
+        Progress.Level0Color = clLime
+        Progress.Level0ColorTo = 14811105
+        Progress.Level1Color = clYellow
+        Progress.Level1ColorTo = 13303807
+        Progress.Level2Color = 5483007
+        Progress.Level2ColorTo = 11064319
+        Progress.Level3Color = clRed
+        Progress.Level3ColorTo = 13290239
+        Progress.Level1Perc = 70
+        Progress.Level2Perc = 90
+        Progress.BorderColor = clBlack
+        Progress.ShowBorder = False
+        Progress.Stacked = False
+        TimeFormat = 'h:mm:ss'
+        Width = 100
+      end
+      item
+        AppearanceStyle = psLight
+        DateFormat = 'd/MM/yyyy'
+        Progress.BackGround = clNone
+        Progress.Indication = piPercentage
+        Progress.Min = 0
+        Progress.Max = 100
+        Progress.Position = 0
+        Progress.Level0Color = clLime
+        Progress.Level0ColorTo = 14811105
+        Progress.Level1Color = clYellow
+        Progress.Level1ColorTo = 13303807
+        Progress.Level2Color = 5483007
+        Progress.Level2ColorTo = 11064319
+        Progress.Level3Color = clRed
+        Progress.Level3ColorTo = 13290239
+        Progress.Level1Perc = 70
+        Progress.Level2Perc = 90
+        Progress.BorderColor = clBlack
+        Progress.ShowBorder = False
+        Progress.Stacked = False
+        TimeFormat = 'h:mm:ss'
+        Width = 130
+      end
+      item
+        AppearanceStyle = psLight
+        DateFormat = 'd/MM/yyyy'
+        Progress.BackGround = clNone
+        Progress.Indication = piPercentage
+        Progress.Min = 0
+        Progress.Max = 100
+        Progress.Position = 0
+        Progress.Level0Color = clLime
+        Progress.Level0ColorTo = 14811105
+        Progress.Level1Color = clYellow
+        Progress.Level1ColorTo = 13303807
+        Progress.Level2Color = 5483007
+        Progress.Level2ColorTo = 11064319
+        Progress.Level3Color = clRed
+        Progress.Level3ColorTo = 13290239
+        Progress.Level1Perc = 70
+        Progress.Level2Perc = 90
+        Progress.BorderColor = clBlack
+        Progress.ShowBorder = False
+        Progress.Stacked = False
+        TimeFormat = 'h:mm:ss'
+        Width = 50
+      end>
+    ShowSplitter = True
+    SimplePanel = False
+    Styler = AdvOfficeStatusBarOfficeStyler1
+    UseSystemFont = False
+    Version = '1.7.3.5'
+  end
+  object AdvToolBarOfficeStyler1: TAdvToolBarOfficeStyler
+    AppColor.AppButtonColor = 14851584
+    AppColor.AppButtonHoverColor = 16755772
+    AppColor.TextColor = clWhite
+    AppColor.HoverColor = 16246477
+    AppColor.HoverTextColor = clBlack
+    AppColor.HoverBorderColor = 15187578
+    AppColor.SelectedColor = 15187578
+    AppColor.SelectedTextColor = clBlack
+    AppColor.SelectedBorderColor = 15187578
+    Style = bsOffice2007Luna
+    BorderColor = 14141623
+    BorderColorHot = 14731181
+    ButtonAppearance.Color = 13627626
+    ButtonAppearance.ColorTo = 9224369
+    ButtonAppearance.ColorChecked = 9229823
+    ButtonAppearance.ColorCheckedTo = 5812223
+    ButtonAppearance.ColorDown = 5149182
+    ButtonAppearance.ColorDownTo = 9556991
+    ButtonAppearance.ColorHot = 13432063
+    ButtonAppearance.ColorHotTo = 9556223
+    ButtonAppearance.BorderDownColor = 3693887
+    ButtonAppearance.BorderHotColor = 3693887
+    ButtonAppearance.BorderCheckedColor = 3693887
+    ButtonAppearance.CaptionFont.Charset = DEFAULT_CHARSET
+    ButtonAppearance.CaptionFont.Color = clWindowText
+    ButtonAppearance.CaptionFont.Height = -11
+    ButtonAppearance.CaptionFont.Name = 'Segoe UI'
+    ButtonAppearance.CaptionFont.Style = []
+    CaptionAppearance.CaptionColor = 15915714
+    CaptionAppearance.CaptionColorTo = 15784385
+    CaptionAppearance.CaptionTextColor = 11168318
+    CaptionAppearance.CaptionBorderColor = 10987431
+    CaptionAppearance.CaptionColorHot = 16769224
+    CaptionAppearance.CaptionColorHotTo = 16772566
+    CaptionAppearance.CaptionTextColorHot = 11168318
+    CaptionAppearance.CaptionBorderColorHot = 12040119
+    CaptionFont.Charset = DEFAULT_CHARSET
+    CaptionFont.Color = clWindowText
+    CaptionFont.Height = -11
+    CaptionFont.Name = 'Segoe UI'
+    CaptionFont.Style = []
+    ContainerAppearance.LineColor = clBtnShadow
+    ContainerAppearance.Line3D = True
+    Color.Color = 15587527
+    Color.ColorTo = 16181721
+    Color.Direction = gdVertical
+    Color.Mirror.Color = 15984090
+    Color.Mirror.ColorTo = 15785680
+    Color.Mirror.ColorMirror = 15587784
+    Color.Mirror.ColorMirrorTo = 16510428
+    ColorHot.Color = 16773606
+    ColorHot.ColorTo = 16444126
+    ColorHot.Direction = gdVertical
+    ColorHot.Mirror.Color = 16642021
+    ColorHot.Mirror.ColorTo = 16576743
+    ColorHot.Mirror.ColorMirror = 16509403
+    ColorHot.Mirror.ColorMirrorTo = 16510428
+    CompactGlowButtonAppearance.BorderColor = 14727579
+    CompactGlowButtonAppearance.BorderColorHot = 15193781
+    CompactGlowButtonAppearance.BorderColorDown = 12034958
+    CompactGlowButtonAppearance.BorderColorChecked = 12034958
+    CompactGlowButtonAppearance.Color = 15653832
+    CompactGlowButtonAppearance.ColorTo = 16178633
+    CompactGlowButtonAppearance.ColorChecked = 14599853
+    CompactGlowButtonAppearance.ColorCheckedTo = 13544844
+    CompactGlowButtonAppearance.ColorDisabled = 15921906
+    CompactGlowButtonAppearance.ColorDisabledTo = 15921906
+    CompactGlowButtonAppearance.ColorDown = 14599853
+    CompactGlowButtonAppearance.ColorDownTo = 13544844
+    CompactGlowButtonAppearance.ColorHot = 16250863
+    CompactGlowButtonAppearance.ColorHotTo = 16246742
+    CompactGlowButtonAppearance.ColorMirror = 15586496
+    CompactGlowButtonAppearance.ColorMirrorTo = 16245200
+    CompactGlowButtonAppearance.ColorMirrorHot = 16247491
+    CompactGlowButtonAppearance.ColorMirrorHotTo = 16246742
+    CompactGlowButtonAppearance.ColorMirrorDown = 16766645
+    CompactGlowButtonAppearance.ColorMirrorDownTo = 13014131
+    CompactGlowButtonAppearance.ColorMirrorChecked = 16766645
+    CompactGlowButtonAppearance.ColorMirrorCheckedTo = 13014131
+    CompactGlowButtonAppearance.ColorMirrorDisabled = 11974326
+    CompactGlowButtonAppearance.ColorMirrorDisabledTo = 15921906
+    CompactGlowButtonAppearance.GradientHot = ggVertical
+    CompactGlowButtonAppearance.GradientMirrorHot = ggVertical
+    CompactGlowButtonAppearance.GradientDown = ggVertical
+    CompactGlowButtonAppearance.GradientMirrorDown = ggVertical
+    CompactGlowButtonAppearance.GradientChecked = ggVertical
+    DockColor.Color = 15587527
+    DockColor.ColorTo = 16445929
+    DockColor.Direction = gdHorizontal
+    DockColor.Steps = 128
+    DragGripStyle = dsNone
+    FloatingWindowBorderColor = 14922381
+    FloatingWindowBorderWidth = 1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    GlowButtonAppearance.BorderColor = 14727579
+    GlowButtonAppearance.BorderColorHot = 10079963
+    GlowButtonAppearance.BorderColorDown = 4548219
+    GlowButtonAppearance.BorderColorChecked = 4548219
+    GlowButtonAppearance.Color = 15653832
+    GlowButtonAppearance.ColorTo = 16178633
+    GlowButtonAppearance.ColorChecked = 11918331
+    GlowButtonAppearance.ColorCheckedTo = 7915518
+    GlowButtonAppearance.ColorDisabled = 15921906
+    GlowButtonAppearance.ColorDisabledTo = 15921906
+    GlowButtonAppearance.ColorDown = 7778289
+    GlowButtonAppearance.ColorDownTo = 4296947
+    GlowButtonAppearance.ColorHot = 15465983
+    GlowButtonAppearance.ColorHotTo = 11332863
+    GlowButtonAppearance.ColorMirror = 15586496
+    GlowButtonAppearance.ColorMirrorTo = 16245200
+    GlowButtonAppearance.ColorMirrorHot = 5888767
+    GlowButtonAppearance.ColorMirrorHotTo = 10807807
+    GlowButtonAppearance.ColorMirrorDown = 946929
+    GlowButtonAppearance.ColorMirrorDownTo = 5021693
+    GlowButtonAppearance.ColorMirrorChecked = 10480637
+    GlowButtonAppearance.ColorMirrorCheckedTo = 5682430
+    GlowButtonAppearance.ColorMirrorDisabled = 11974326
+    GlowButtonAppearance.ColorMirrorDisabledTo = 15921906
+    GlowButtonAppearance.GradientHot = ggVertical
+    GlowButtonAppearance.GradientMirrorHot = ggVertical
+    GlowButtonAppearance.GradientDown = ggVertical
+    GlowButtonAppearance.GradientMirrorDown = ggVertical
+    GlowButtonAppearance.GradientChecked = ggVertical
+    GroupAppearance.Background = clInfoBk
+    GroupAppearance.BorderColor = 12763842
+    GroupAppearance.Color = 15851212
+    GroupAppearance.ColorTo = 14213857
+    GroupAppearance.ColorMirror = 14213857
+    GroupAppearance.ColorMirrorTo = 10871273
+    GroupAppearance.Font.Charset = DEFAULT_CHARSET
+    GroupAppearance.Font.Color = clWindowText
+    GroupAppearance.Font.Height = -11
+    GroupAppearance.Font.Name = 'Segoe UI'
+    GroupAppearance.Font.Style = []
+    GroupAppearance.Gradient = ggVertical
+    GroupAppearance.GradientMirror = ggVertical
+    GroupAppearance.TextColor = 9126421
+    GroupAppearance.CaptionAppearance.CaptionColor = 15915714
+    GroupAppearance.CaptionAppearance.CaptionColorTo = 15784385
+    GroupAppearance.CaptionAppearance.CaptionTextColor = 11168318
+    GroupAppearance.CaptionAppearance.CaptionBorderColor = 16181724
+    GroupAppearance.CaptionAppearance.CaptionColorHot = 16769224
+    GroupAppearance.CaptionAppearance.CaptionColorHotTo = 16772566
+    GroupAppearance.CaptionAppearance.CaptionTextColorHot = 11168318
+    GroupAppearance.CaptionAppearance.CaptionBorderColorHot = 16117737
+    GroupAppearance.PageAppearance.BorderColor = 12763842
+    GroupAppearance.PageAppearance.Color = 14086910
+    GroupAppearance.PageAppearance.ColorTo = 16382457
+    GroupAppearance.PageAppearance.ColorMirror = 16382457
+    GroupAppearance.PageAppearance.ColorMirrorTo = 16382457
+    GroupAppearance.PageAppearance.Gradient = ggVertical
+    GroupAppearance.PageAppearance.GradientMirror = ggVertical
+    GroupAppearance.PageAppearance.ShadowColor = 12888726
+    GroupAppearance.PageAppearance.HighLightColor = 16644558
+    GroupAppearance.TabAppearance.BorderColor = 10534860
+    GroupAppearance.TabAppearance.BorderColorHot = 10534860
+    GroupAppearance.TabAppearance.BorderColorSelected = 10534860
+    GroupAppearance.TabAppearance.BorderColorSelectedHot = 10534860
+    GroupAppearance.TabAppearance.BorderColorDisabled = clNone
+    GroupAppearance.TabAppearance.BorderColorDown = clNone
+    GroupAppearance.TabAppearance.Color = clBtnFace
+    GroupAppearance.TabAppearance.ColorTo = clWhite
+    GroupAppearance.TabAppearance.ColorSelected = 10412027
+    GroupAppearance.TabAppearance.ColorSelectedTo = 12249340
+    GroupAppearance.TabAppearance.ColorDisabled = 15921906
+    GroupAppearance.TabAppearance.ColorDisabledTo = 15921906
+    GroupAppearance.TabAppearance.ColorHot = 14542308
+    GroupAppearance.TabAppearance.ColorHotTo = 16768709
+    GroupAppearance.TabAppearance.ColorMirror = clWhite
+    GroupAppearance.TabAppearance.ColorMirrorTo = clWhite
+    GroupAppearance.TabAppearance.ColorMirrorHot = 14016477
+    GroupAppearance.TabAppearance.ColorMirrorHotTo = 10736609
+    GroupAppearance.TabAppearance.ColorMirrorSelected = 12249340
+    GroupAppearance.TabAppearance.ColorMirrorSelectedTo = 13955581
+    GroupAppearance.TabAppearance.ColorMirrorDisabled = 15921906
+    GroupAppearance.TabAppearance.ColorMirrorDisabledTo = 15921906
+    GroupAppearance.TabAppearance.Font.Charset = DEFAULT_CHARSET
+    GroupAppearance.TabAppearance.Font.Color = clWindowText
+    GroupAppearance.TabAppearance.Font.Height = -11
+    GroupAppearance.TabAppearance.Font.Name = 'Segoe UI'
+    GroupAppearance.TabAppearance.Font.Style = []
+    GroupAppearance.TabAppearance.Gradient = ggRadial
+    GroupAppearance.TabAppearance.GradientMirror = ggRadial
+    GroupAppearance.TabAppearance.GradientHot = ggVertical
+    GroupAppearance.TabAppearance.GradientMirrorHot = ggVertical
+    GroupAppearance.TabAppearance.GradientSelected = ggVertical
+    GroupAppearance.TabAppearance.GradientMirrorSelected = ggVertical
+    GroupAppearance.TabAppearance.GradientDisabled = ggVertical
+    GroupAppearance.TabAppearance.GradientMirrorDisabled = ggVertical
+    GroupAppearance.TabAppearance.TextColor = 9126421
+    GroupAppearance.TabAppearance.TextColorHot = 9126421
+    GroupAppearance.TabAppearance.TextColorSelected = 9126421
+    GroupAppearance.TabAppearance.TextColorDisabled = clGray
+    GroupAppearance.TabAppearance.ShadowColor = 15255470
+    GroupAppearance.TabAppearance.HighLightColor = 16775871
+    GroupAppearance.TabAppearance.HighLightColorHot = 16643309
+    GroupAppearance.TabAppearance.HighLightColorSelected = 6540536
+    GroupAppearance.TabAppearance.HighLightColorSelectedHot = 12451839
+    GroupAppearance.TabAppearance.HighLightColorDown = 16776144
+    GroupAppearance.ToolBarAppearance.BorderColor = 13423059
+    GroupAppearance.ToolBarAppearance.BorderColorHot = 13092807
+    GroupAppearance.ToolBarAppearance.Color.Color = 15530237
+    GroupAppearance.ToolBarAppearance.Color.ColorTo = 16382457
+    GroupAppearance.ToolBarAppearance.Color.Direction = gdHorizontal
+    GroupAppearance.ToolBarAppearance.ColorHot.Color = 15660277
+    GroupAppearance.ToolBarAppearance.ColorHot.ColorTo = 16645114
+    GroupAppearance.ToolBarAppearance.ColorHot.Direction = gdHorizontal
+    PageAppearance.BorderColor = 14922381
+    PageAppearance.Color = 15984090
+    PageAppearance.ColorTo = 15785680
+    PageAppearance.ColorMirror = 15587784
+    PageAppearance.ColorMirrorTo = 16774371
+    PageAppearance.Gradient = ggVertical
+    PageAppearance.GradientMirror = ggVertical
+    PageAppearance.ShadowColor = 12888726
+    PageAppearance.HighLightColor = 16644558
+    PagerCaption.BorderColor = 15780526
+    PagerCaption.Color = 15525858
+    PagerCaption.ColorTo = 15590878
+    PagerCaption.ColorMirror = 15524312
+    PagerCaption.ColorMirrorTo = 15723487
+    PagerCaption.Gradient = ggVertical
+    PagerCaption.GradientMirror = ggVertical
+    PagerCaption.TextColor = 11168318
+    PagerCaption.TextColorExtended = 7958633
+    PagerCaption.Font.Charset = DEFAULT_CHARSET
+    PagerCaption.Font.Color = clWindowText
+    PagerCaption.Font.Height = -13
+    PagerCaption.Font.Name = 'Segoe UI'
+    PagerCaption.Font.Style = []
+    QATAppearance.BorderColor = 14005146
+    QATAppearance.Color = 16050142
+    QATAppearance.ColorTo = 15653065
+    QATAppearance.FullSizeBorderColor = 13476222
+    QATAppearance.FullSizeColor = 15584690
+    QATAppearance.FullSizeColorTo = 15386026
+    RightHandleColor = 14668485
+    RightHandleColorTo = 14731181
+    RightHandleColorHot = 13891839
+    RightHandleColorHotTo = 7782911
+    RightHandleColorDown = 557032
+    RightHandleColorDownTo = 8182519
+    TabAppearance.BorderColor = clNone
+    TabAppearance.BorderColorHot = 15383705
+    TabAppearance.BorderColorSelected = 14922381
+    TabAppearance.BorderColorSelectedHot = 6343929
+    TabAppearance.BorderColorDisabled = clNone
+    TabAppearance.BorderColorDown = clNone
+    TabAppearance.Color = clBtnFace
+    TabAppearance.ColorTo = clWhite
+    TabAppearance.ColorSelected = 16709360
+    TabAppearance.ColorSelectedTo = 16445929
+    TabAppearance.ColorDisabled = clWhite
+    TabAppearance.ColorDisabledTo = clSilver
+    TabAppearance.ColorHot = 14542308
+    TabAppearance.ColorHotTo = 16768709
+    TabAppearance.ColorMirror = clWhite
+    TabAppearance.ColorMirrorTo = clWhite
+    TabAppearance.ColorMirrorHot = 14016477
+    TabAppearance.ColorMirrorHotTo = 10736609
+    TabAppearance.ColorMirrorSelected = 16445929
+    TabAppearance.ColorMirrorSelectedTo = 16181984
+    TabAppearance.ColorMirrorDisabled = clWhite
+    TabAppearance.ColorMirrorDisabledTo = clSilver
+    TabAppearance.Font.Charset = DEFAULT_CHARSET
+    TabAppearance.Font.Color = clWindowText
+    TabAppearance.Font.Height = -11
+    TabAppearance.Font.Name = 'Segoe UI'
+    TabAppearance.Font.Style = []
+    TabAppearance.Gradient = ggVertical
+    TabAppearance.GradientMirror = ggVertical
+    TabAppearance.GradientHot = ggRadial
+    TabAppearance.GradientMirrorHot = ggVertical
+    TabAppearance.GradientSelected = ggVertical
+    TabAppearance.GradientMirrorSelected = ggVertical
+    TabAppearance.GradientDisabled = ggVertical
+    TabAppearance.GradientMirrorDisabled = ggVertical
+    TabAppearance.TextColor = 9126421
+    TabAppearance.TextColorHot = 9126421
+    TabAppearance.TextColorSelected = 9126421
+    TabAppearance.TextColorDisabled = clGray
+    TabAppearance.ShadowColor = 15255470
+    TabAppearance.HighLightColor = 16775871
+    TabAppearance.HighLightColorHot = 16643309
+    TabAppearance.HighLightColorSelected = 6540536
+    TabAppearance.HighLightColorSelectedHot = 12451839
+    TabAppearance.HighLightColorDown = 16776144
+    TabAppearance.BackGround.Color = 16767935
+    TabAppearance.BackGround.ColorTo = clNone
+    TabAppearance.BackGround.Direction = gdHorizontal
+    Left = 248
+    Top = 304
+  end
+  object AdvOfficeStatusBarOfficeStyler1: TAdvOfficeStatusBarOfficeStyler
+    Style = psOffice2010Blue
+    BorderColor = 15987699
+    PanelAppearanceLight.BorderColor = clNone
+    PanelAppearanceLight.BorderColorHot = 13421772
+    PanelAppearanceLight.BorderColorDown = 9803157
+    PanelAppearanceLight.Color = clWhite
+    PanelAppearanceLight.ColorTo = clWhite
+    PanelAppearanceLight.ColorHot = 13421772
+    PanelAppearanceLight.ColorHotTo = 13421772
+    PanelAppearanceLight.ColorDown = 9803157
+    PanelAppearanceLight.ColorDownTo = 9803157
+    PanelAppearanceLight.ColorMirror = clWhite
+    PanelAppearanceLight.ColorMirrorTo = clWhite
+    PanelAppearanceLight.ColorMirrorHot = 13421772
+    PanelAppearanceLight.ColorMirrorHotTo = 13421772
+    PanelAppearanceLight.ColorMirrorDown = 9803157
+    PanelAppearanceLight.ColorMirrorDownTo = 9803157
+    PanelAppearanceLight.TextColor = clBlack
+    PanelAppearanceLight.TextColorHot = clBlack
+    PanelAppearanceLight.TextColorDown = clBlack
+    PanelAppearanceLight.TextStyle = []
+    PanelAppearanceDark.BorderColor = clNone
+    PanelAppearanceDark.BorderColorHot = 13421772
+    PanelAppearanceDark.BorderColorDown = 9803157
+    PanelAppearanceDark.Color = clWhite
+    PanelAppearanceDark.ColorTo = clWhite
+    PanelAppearanceDark.ColorHot = 13421772
+    PanelAppearanceDark.ColorHotTo = 13421772
+    PanelAppearanceDark.ColorDown = 9803157
+    PanelAppearanceDark.ColorDownTo = 9803157
+    PanelAppearanceDark.ColorMirror = clWhite
+    PanelAppearanceDark.ColorMirrorTo = clWhite
+    PanelAppearanceDark.ColorMirrorHot = 13421772
+    PanelAppearanceDark.ColorMirrorHotTo = 13421772
+    PanelAppearanceDark.ColorMirrorDown = 9803157
+    PanelAppearanceDark.ColorMirrorDownTo = 9803157
+    PanelAppearanceDark.TextColor = clBlack
+    PanelAppearanceDark.TextColorHot = clBlack
+    PanelAppearanceDark.TextColorDown = clBlack
+    PanelAppearanceDark.TextStyle = []
+    Left = 600
+    Top = 304
+  end
+end

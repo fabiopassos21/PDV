@@ -1,0 +1,50 @@
+object Lookup: TLookup
+  Height = 449
+  Width = 767
+  object DSEstado: TDataSource
+    DataSet = FDQueryEstado
+    Left = 536
+    Top = 120
+  end
+  object FDTransaction: TFDTransaction
+    Connection = DataModule1.fdConnect
+    Left = 536
+    Top = 64
+  end
+  object FDQueryEstado: TFDQuery
+    ChangeAlertName = 'F'
+    Connection = DataModule1.fdConnect
+    Transaction = FDTransaction
+    SQL.Strings = (
+      '                 select * from estado'
+      '                 ')
+    Left = 536
+    Top = 184
+  end
+  object FDQueryCidade: TFDQuery
+    Connection = DataModule1.fdConnect
+    Transaction = FDTransaction
+    SQL.Strings = (
+      'select * from cidade')
+    Left = 280
+    Top = 160
+  end
+  object DSCidade: TDataSource
+    DataSet = FDQueryCidade
+    Left = 288
+    Top = 104
+  end
+  object FDQRYFornecedor: TFDQuery
+    Connection = DataModule1.fdConnect
+    Transaction = FDTransaction
+    SQL.Strings = (
+      'select * from FORNECEDOR')
+    Left = 120
+    Top = 304
+  end
+  object DSQRYFORNECEDOR: TDataSource
+    DataSet = FDQRYFornecedor
+    Left = 120
+    Top = 248
+  end
+end

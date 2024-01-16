@@ -1,0 +1,121 @@
+inherited FormFiltroCliente: TFormFiltroCliente
+  Caption = 'Filtro de Clientes'
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited FormFiltroPai: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited Label1: TLabel
+      Width = 90
+      Caption = 'Nome do Cliente'
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitWidth = 90
+    end
+    inherited edtFiltro: TEdit
+      Left = 9
+      Width = 353
+      Text = ''
+      StyleElements = [seFont, seClient, seBorder]
+      ExplicitLeft = 9
+      ExplicitWidth = 353
+    end
+    inherited btnFiltro: TButton
+      Left = 384
+      Caption = 'Pesquisar'
+      OnClick = btnFiltroClick
+      ExplicitLeft = 384
+    end
+  end
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 81
+    Width = 624
+    Height = 360
+    Align = alClient
+    DataSource = DSFiltro
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    StyleName = 'Windows'
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_CLIENTE'
+        Title.Caption = 'Codigo '
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'RAZAO_SOCIAL'
+        Title.Caption = 'Raz'#227'o Social'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FANTASIA'
+        Title.Caption = 'Fantasia'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EMAIL'
+        Title.Caption = 'E-mail'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CFP_CNPJ'
+        Title.Caption = 'CPF/CNPJ'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPO'
+        Title.Caption = 'Tipo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Title.Caption = 'Nome'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NUMERO'
+        Title.Caption = 'Numero'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'BAIRRO'
+        Title.Caption = 'Bairro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'OBS'
+        Visible = True
+      end>
+  end
+  inherited DSFiltro: TDataSource
+    DataSet = FDQryFiltro
+  end
+  inherited FDQryFiltro: TFDQuery
+    Connection = DataModule1.fdConnect
+    SQL.Strings = (
+      'select * from cliente')
+  end
+  object FDTransaction: TFDTransaction
+    Connection = DataModule1.fdConnect
+    Left = 568
+    Top = 248
+  end
+end
